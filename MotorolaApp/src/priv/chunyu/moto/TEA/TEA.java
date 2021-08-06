@@ -5,13 +5,14 @@ public class TEA {
 		String x;
 	public TEA(String[] keydata) {
 	//	int[] key your own key;
+		int[] key = new int[] {0x152C7E9D,0x38BE41C7,0x71E96CA4,0x6CAC1AFC };
 		data[0] = (int) Long.parseLong(keydata[0], 16);
 		data[1] = (int) Long.parseLong(keydata[1], 16);
 		int[] encrypt= encrypt(data, key);
 		x=intArrToHex(encrypt);
-	//	System.out.println("Encrypted      : " + intArrToHex(encrypt));
+		System.out.println("Encrypted      : " + intArrToHex(encrypt));
 		int[] decrypt= decrypt(data, key);
-	//	System.out.println("Decrypted      : " + intArrToHex(decrypt));
+		System.out.println("Decrypted      : " + intArrToHex(decrypt));
 	}
 	private static int[] encrypt(int[] block, int[] key) {
 		int i = block[0];
