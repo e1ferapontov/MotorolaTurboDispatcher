@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<title>Motorola GPS</title>
-<link rel="stylesheet" href="theme/default/style.css" type="text/css">
-<link rel="stylesheet" href="style.css" type="text/css">
-<script src="lib/OpenLayers.js"></script>
-<script type="text/javascript">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>Motorola GPS</title>
+    <link href="theme/default/style.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="lib/OpenLayers.js"></script>
+    <script type="text/javascript">
 	var map, layer;
 	function init() {
 		map = new OpenLayers.Map('map');
@@ -18,8 +18,9 @@
 		map.addLayer(osm);
 		map.setCenter(new OpenLayers.LonLat(0, 0), 1);
 	}
-</script>
-<script type="text/javascript">
+
+    </script>
+    <script type="text/javascript">
 	function addmarker(id, lat, lon) {
 		var markers = new OpenLayers.Layer.Markers("Markers");
 		map.addLayer(markers);
@@ -39,16 +40,18 @@
 		map.addPopup(popup, false);
 		map.setCenter(lonLat, zoom);
 	}
-</script>
+
+    </script>
 </head>
 <body onload="init()">
-	<style>
+<style>
 #map {
 	height: 400px;
 	width: 100%;
 	border: 1px solid black;
 }
+
 </style>
-	<div id="map"></div>
+<div id="map"></div>
 </body>
 </html>
